@@ -19,3 +19,11 @@ log_event(){
             ;;
     esac
 }
+
+check_root(){
+    if [[ $EUID -ne 0 ]]
+    then
+        log_event "ERROR" "This script must be run as root. Exiting."
+        exit 1
+    fi
+}
