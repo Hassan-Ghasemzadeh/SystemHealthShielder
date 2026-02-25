@@ -41,7 +41,11 @@ monitor_memory(){
 }
 
 main(){
-
+    log_event "INFO" "Starting system resource monitoring..."
+    check_root
+    monitor_cpu
+    monitor_memory
+    log_event "INFO" "System resource monitoring completed."
 }
 
 main "$@"
