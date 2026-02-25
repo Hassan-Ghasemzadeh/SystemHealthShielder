@@ -20,4 +20,11 @@ monitor_cpu(){
     #-d: (delimiter) show spliter charactor
     #-f1:(Field 1) shows field 1 after spli
     local cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}') | cut -d -f1
+
+    if [[ "$cpu_usage" -gt "$CPU_THRESHOLD" ]]
+    then
+        log_event "Warn" "CPU usage is high: ${cpu_usage}%"
+    else
+        log_event "Warn" "CPU usage is low: ${cpu_usage}%"
+    fi
 }
