@@ -31,7 +31,7 @@ monitor_cpu(){
 
 monitor_memory(){
     local mem_usage=$(free | grep Mem | awk '{print $3/$2 *100.0}') | cut -d. -f1
-    
+
     if [[ "$mem_usage" -gt "$MEMORY_THRESHOLD" ]]
     then
         log_event "Warn" "Memory usage is high: ${mem_usage}%"
@@ -39,3 +39,9 @@ monitor_memory(){
         log_event "Warn" "Memory usage is low: ${mem_usage}%"
     fi
 }
+
+main(){
+
+}
+
+main "$@"
