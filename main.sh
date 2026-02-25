@@ -13,3 +13,11 @@ cleanup(){
     exit 1
 }
 trap cleanup EXIT
+
+monitor_cpu(){
+    #-b: (batch mode) prepares the response for processing with no graphic or color 
+    #-n1 (number 1):show only one time and then exit
+    #-d: (delimiter) show spliter charactor
+    #-f1:(Field 1) shows field 1 after spli
+    local cpu_usage=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}') | cut -d -f1
+}
