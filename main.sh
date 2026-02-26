@@ -15,6 +15,9 @@ cleanup(){
     log_event "INFO" "Securely closing script..."
     exit 1
 }
+# trap: Sets a trap to execute the cleanup function when the script exits, 
+# ensuring that any necessary cleanup actions are performed regardless of 
+# how the script terminates.
 trap cleanup EXIT
 
 monitor_cpu(){
