@@ -48,6 +48,7 @@ monitor_memory(){
     fi
 }
 
+# The main function serves as the entry point of the script, orchestrating the execution of various tasks.
 main(){
     log_event "INFO" "Starting system resource monitoring..."
     check_root
