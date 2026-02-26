@@ -4,6 +4,9 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+# Define constants and source configuration
+# APP_ROOT: The directory where the script is located
+# readlink -f: returns the absolute path of the script, and dirname extracts the directory part
 readonly APP_ROOT=$(dirname "$(readlink -f "$0")")
 source "$APP_ROOT/config/app.conf"
 source "$APP_ROOT/lib/utils.sh"
