@@ -35,6 +35,8 @@ monitor_cpu(){
     fi
 }
 
+#free: shows the total amount of free and used physical and swap memory in the system,
+#as well as the buffers used by the kernel.
 monitor_memory(){
     local mem_usage=$(free | grep Mem | awk '{print $3/$2 *100.0}') | cut -d. -f1
 
