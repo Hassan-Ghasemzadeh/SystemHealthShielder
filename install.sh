@@ -2,6 +2,7 @@
 
 
 INSTALL_DIR="/opt/system-health-shielder"
+
 BIN_LINK="/usr/local/bin/system-health-shielder"
 
 # Check if the script is run as root
