@@ -7,8 +7,10 @@ log_event(){
     local message=$2
     local timestamp=$(date +%Y-%m-%d %H-%M-%S)
 
+    # Ensure the log directory exists
     mkdir -p "$(dirname "$LOG_FILE")"
 
+    # Log the message with appropriate color coding based on the level
     case $level in
         "INFO")\
             #green
