@@ -28,6 +28,8 @@ log_event(){
 }
 
 
+
+# Function to check if the script is run as root
 check_root(){
     if [[ $EUID -ne 0 ]]
     then
