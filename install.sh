@@ -15,7 +15,7 @@ echo "Installing System Health Shielder..."
 # Create installation directory
 mkdir -p "$INSTALL_DIR"
 # Copy files to the installation directory
-cp -r ./* "$INSTALL_DIR"
+cp -rf ./* "$INSTALL_DIR"
 
 # Make the main script executable
 chmod +x "$INSTALL_DIR/main.sh"
