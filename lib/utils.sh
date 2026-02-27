@@ -2,6 +2,7 @@
 
 
 log_event(){
+    # Logs events to a file with a timestamp and color-coded levels.
     local level=$1
     local message=$2
     local timestamp=$(date +%Y-%m-%d %H-%M-%S)
