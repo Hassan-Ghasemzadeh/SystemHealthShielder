@@ -25,4 +25,5 @@ ln -sf "$INSTALL_DIR/main.sh" "$BIN_LINK"
 
 
 echo "Installation completed successfully!"
+
 echo "You can run the tool using: system-health-shielder"
