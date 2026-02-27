@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 # Safty standard for bash scripts
+# set -e: Exit immediately if a command exits with a non-zero status.
+# set -u: Treat unset variables as an error and exit immediately.
+# set -o pipefail: Return the exit status of the last command in the pipeline that failed.
+# IFS=$'\n\t': Set the Internal Field Separator to newline and tab,
+# which helps to handle filenames with spaces and tabs correctly.
 set -euo pipefail
 IFS=$'\n\t'
 
