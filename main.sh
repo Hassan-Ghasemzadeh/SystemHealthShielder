@@ -57,4 +57,6 @@ main(){
     log_event "INFO" "System resource monitoring completed."
 }
 
+# The last line of the script calls the main function, passing any command-line arguments to it.
+# This allows the script to be executed directly, and the main function will handle the overall flow of the program.
 main "$@"
